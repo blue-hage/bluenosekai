@@ -39,7 +39,7 @@ def contact():
     return render_template("contact-form.html")
 
 @bp.route("/send_contact", methods=["POST"])
-def send_apply():
+def send_contact():
     if request.method == "POST":
         name = request.form["name"]
         email = request.form["email"]
@@ -47,7 +47,7 @@ def send_apply():
 
         exec("INSERT INTO contact (name, email, body) VALUES (%s, %s, %s)", name, email, body)
         contact_create(email, name, body)
-        return redirect("/msg")
+        return redirect("/msg/1")
 
 #apply zone
 @bp.route("/apply", methods=["GET", "POST"])
@@ -99,11 +99,14 @@ def send_apply():
         deadline = request.form["deadline"]
         body = request.form["body"]
 
-        exec("INSERT INTO contact (name, email, tel, detail, budget, deadline, body) VALUES (%s, %s, %s, %s, %s, %s, %s)", 
+        exec("INSERT INTO apply (name, email, tel, detail, budget, deadline, body) VALUES (%s, %s, %s, %s, %s, %s, %s)", 
         name, email, tel, detail, budget, deadline, body)
         contact_create(email, name, body, tel, detail, budget, deadline)
-        return redirect("/msg")
+        return redirect("/msg/2")
 
-@bp.route("/msg")
-def msg():
-    return render_template("msg.html")
+@bp.route("/msg/<int:id>")
+def msg(id):
+    if id == 1:
+        return render_template("msg.html", title='お問い合わせ')
+    else:
+        return render_template("msg.html", title="制作依頼")
