@@ -39,8 +39,8 @@ def contact():
         
     return render_template("contact-form.html")
 
-@bp.route("/send_contact", methods=["POST"])
-def send_contact():
+@bp.route("/send_question", methods=["POST"])
+def send_question():
     if request.method == "POST":
         name = request.form["name"]
         email = request.form["email"]

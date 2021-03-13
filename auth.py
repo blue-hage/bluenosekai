@@ -53,9 +53,9 @@ def register():
         if not username:
             error = "ユーザー名を入力してください。"
         elif not password:
-            eror = "パスワードを入力してください。"
+            error = "パスワードを入力してください。"
         elif select("SELECT id FROM user WHERE username = %s", username):
-            error = "ユーザー名　{} は既に登録されています。".format(username)
+            error = "ユーザー名:{} は既に登録されています。".format(username)
         elif confirm != password:
             error = "パスワードが正しくありません。"
         

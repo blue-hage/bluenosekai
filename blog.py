@@ -1,13 +1,10 @@
 #!/usr/local/bin/python3
 from os import error
 from flask import(
-    Blueprint, flash, g, redirect, render_template, request
+    Blueprint, render_template
 )
 from werkzeug.exceptions import abort
-
-from auth import login_required
 from db import select
-from mail import contact_create
 
 bp = Blueprint("blog", __name__)
 

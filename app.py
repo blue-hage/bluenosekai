@@ -1,5 +1,5 @@
 #!/usr/local/bin/python3
-import os, sentry_sdk
+import os
 from sentry_sdk.integrations.flask import FlaskIntegration
 from flask import Flask
 import db, auth, blog, admin, contact

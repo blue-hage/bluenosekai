@@ -4,7 +4,7 @@ import smtplib
 
 USER_NAME_CONTACT = "contact@bluenosekai.com"
 PASSWORD_CONTACT = "20210313"
-RECIPIENT_CONTACT = "jpmsadr00603@gmail.com"
+RECIPIENT_CONTACT = "lamp-admin@bluenosekai.com"
 HOST = "om1002.coreserver.jp"
 PORT = 465
 
