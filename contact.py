@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3
 from flask import(
     Blueprint, request, render_template, flash, redirect
 )
@@ -47,7 +48,7 @@ def send_contact():
 
         exec("INSERT INTO contact (name, email, body) VALUES (%s, %s, %s)", name, email, body)
         contact_create(email, name, body)
-        return redirect("/msg/1")
+        return redirect("/msg/contact")
 
 #apply zone
 @bp.route("/apply", methods=["GET", "POST"])
@@ -102,11 +103,11 @@ def send_apply():
         exec("INSERT INTO apply (name, email, tel, detail, budget, deadline, body) VALUES (%s, %s, %s, %s, %s, %s, %s)", 
         name, email, tel, detail, budget, deadline, body)
         contact_create(email, name, body, tel, detail, budget, deadline)
-        return redirect("/msg/2")
+        return redirect("/msg/apply")
 
-@bp.route("/msg/<int:id>")
+@bp.route("/msg/<string:id>")
 def msg(id):
-    if id == 1:
+    if id == "contact":
         return render_template("msg.html", title='お問い合わせ')
     else:
         return render_template("msg.html", title="制作依頼")

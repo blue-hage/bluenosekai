@@ -1,7 +1,5 @@
 #!/usr/local/bin/python3
-
 from logging import error
-from os.path import dirname, join, realpath
 from flask import(
     Blueprint, flash, g, redirect, render_template, request
 )
