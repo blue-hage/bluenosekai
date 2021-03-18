@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3
 from flask import(
     Blueprint, request, render_template, flash, redirect
 )
