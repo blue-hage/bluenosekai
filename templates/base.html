@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue no sekai official website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+
+<body>
+    <div class ="wrapper">
+        <header>
+            <div class = "header-logo">
+                <a href="/"><img src="{{ url_for('static', filename='images/bluenosekialogo2.png') }}"></a>
+            </div>
+
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <div class="menu-content">
+                    <ul>
+                        <li class="close">
+                            <a href="/">Top</a>
+                        </li>
+                        <li class="close">
+                            <a href="/news">News</a>
+                        </li>
+                        <li class="close">
+                            <a href="/service">Service</a>
+                        </li>
+                        <li class="close">
+                            <a href="/works">Works</a>
+                        </li>
+                        <li class="close">
+                            <a href="/aboutus">About us</a>
+                        </li>
+                        <li class="close">
+                            <a href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <ul class="header-menu">
+                <li class="menu">
+                    <a href="/">Top</a>
+                </li>
+                <li class="menu">
+                    <a href="/news">News</a>
+                </li>
+                <li class="menu">
+                    <a href="/service">Service</a>
+                </li>
+                <li class="menu">
+                    <a href="/works">Works</a>
+                </li>
+                <li class="menu">
+                    <a href="/aboutus">About us</a>
+                </li>
+                <li class="menu">
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+        </header>
+        {% block content %}{% endblock %}
+      </div>  
+
+
+
+
+      <footer>
+        <div class = "footer-image">
+            <a href="/"><img src="{{ url_for('static', filename='images/logo2.png') }}"></a> 
+        </div>
+
+        <div class ="policies">
+            <ul>
+                <li><a href="#">セキュリティーポリシー</a></li>
+                <li><a href="#">プライバシーポリシー</a></li>
+            </ul>
+        </div>
+        <p>Copyright © 2021 bluenosekai All Rights Reserved.</p>
+    </footer>  
+  
+      <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

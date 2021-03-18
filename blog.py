@@ -76,3 +76,7 @@ def works():
         length = 0
 
     return render_template("works.html", length=length, works=works)
+
+@bp.route("/service")
+def service():
+    return render_template("service.html")

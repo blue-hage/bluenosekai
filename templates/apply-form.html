@@ -1,200 +1,118 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue no sekai official website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="responsive.css">
-</head>
+{% extends "base.html" %}
 
-<body>
-    <div class ="wrapper">
+{% block content %}
+<div class = "each-page">
+    <div class="container no-scroll">
+        <div class = "title">
+            <h2>Contact</h2>
+        </div>
 
-        <header>
-            <div class = "header-logo">
-                <a href="index.html"><img src="images/bluenosekialogo2.png"></a>
-            </div>
-
-            <div class="hamburger-menu">
-                <input type="checkbox" id="menu-btn-check">
-                <label for="menu-btn-check" class="menu-btn"><span></span></label>
-                <div class="menu-content">
-                    <ul>
-                        <li class="close">
-                            <a href="index.html">Top</a>
-                        </li>
-                        <li class="close">
-                            <a href="news.html">News</a>
-                        </li>
-                        <li class="close">
-                            <a href="service.html">Service</a>
-                        </li>
-                        <li class="close">
-                            <a href="works.html">Works</a>
-                        </li>
-                        <li class="close">
-                            <a href="aboutus.html">About us</a>
-                        </li>
-                        <li class="close">
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <ul class="header-menu">
-                <li class="menu">
-                    <a href="index.html">Top</a>
-                </li>
-                <li class="menu">
-                    <a href="news.html">News</a>
-                </li>
-                <li class="menu">
-                    <a href="#">Service</a>
-                </li>
-                <li class="menu">
-                    <a href="works.html">Works</a>
-                </li>
-                <li class="menu">
-                    <a href="aboutus.html">About us</a>
-                </li>
-                <li class="menu">
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </header>
-
-        <div class = "each-page">
-            <div class="container no-scroll">
-                <div class = "title">
-                    <h2>Contact</h2>
-                </div>
-
-                
-                <div class = "sub-title">
-                    <hr>
-                    <div class = "sub-title-text">
-                        <h2>制作依頼</h2>
-                        <p>Request Form</p>
-                    </div>
-                    <hr>
-                </div>
-
-                <div class = "contact-flow" style="border: 2px solid black;">
-                <p>項目の入力</p>
-                </div>
-                <div class = "arrow">→</div>
-                <div class = "contact-flow">
-                    <p>入力内容の確認</p>
-                </div>
-                <div class = "arrow">→</div>
-                <div class = "contact-flow">
-                    <p>送信完了</p>
-                </div>
-
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlInput1" class="form-label form-left">会社名 / 個人名</label>
-                    <input type="text" class="form-control form-right" id="exampleFormControlInput1" placeholder="〇〇株式会社">
-                </div>
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlInput2" class="form-label form-left">メールアドレス</label>
-                    <input type="email" class="form-control form-right" id="exampleFormControlInput2" placeholder="name@example.com">
-                </div>
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlInput3" class="form-label form-left">メールアドレス再入力</label>
-                    <input type="email" class="form-control form-right" id="exampleFormControlInput3" placeholder="name@example.com">
-                </div>
-
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlInput4" class="form-label form-left">電話番号</label>
-                    <input type="number" class="form-control form-right" id="exampleFormControlInput4" placeholder="00-0000-0000">
-                </div>
-
-
-
-
-
-                <div class="form">
-                    <p class ="required">必須</p>
-                    <p class = "form-left">ご依頼内容</p>
-
-                    <div class ="form-check-select">
-
-                        <div>
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                            新規制作のご依頼
-                            </label>
-
-                            <select class="form-select">
-                                <option selected>ご依頼内容を選択してください</option>
-                                <option value="1">Webサイト</option>
-                                <option value="2">Webサービス</option>
-                            </select>
-                        </div>
-
-                        <div class ="form-check-select-low">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                            改修・運用のご依頼
-                            </label>
-                            <input type="url" class="form-control" id="exampleFormControlInput5" placeholder="https://〇〇〇〇.com">
-
-                        </div>
-                        
-                    </div>
         
-                </div>
+        <div class = "sub-title">
+            <hr>
+            <div class = "sub-title-text">
+                <h2>制作依頼</h2>
+                <p>Request Form</p>
+            </div>
+            <hr>
+        </div>
+
+        <div class = "contact-flow" style="border: 2px solid black;">
+        <p>項目の入力</p>
+        </div>
+        <div class = "arrow">→</div>
+        <div class = "contact-flow">
+            <p>入力内容の確認</p>
+        </div>
+        <div class = "arrow">→</div>
+        <div class = "contact-flow">
+            <p>送信完了</p>
+        </div>
+
+        <form method="POST">
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput1" class="form-label form-left">会社名 / 個人名</label>
+                <input type="text" class="form-control form-right" id="exampleFormControlInput1" placeholder="〇〇株式会社">
+            </div>
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput2" class="form-label form-left">メールアドレス</label>
+                <input type="email" class="form-control form-right" id="exampleFormControlInput2" placeholder="name@example.com">
+            </div>
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput3" class="form-label form-left">メールアドレス再入力</label>
+                <input type="email" class="form-control form-right" id="exampleFormControlInput3" placeholder="name@example.com">
+            </div>
+
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput4" class="form-label form-left">電話番号</label>
+                <input type="number" class="form-control form-right" id="exampleFormControlInput4" placeholder="00-0000-0000">
+            </div>
 
 
 
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlInput5" class="form-label form-left">想定予算</label>
-                    <input type="text" class="form-control form-right" id="exampleFormControlInput5">
-                </div>
 
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlInput5" class="form-label form-left">ご希望納期</label>
-                    <input type="text" class="form-control form-right" id="exampleFormControlInput5">
-                </div>
 
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlTextarea1" class="form-label form-left">目的・概要</label>
-                    <textarea class="form-control form-right" id="exampleFormControlTextarea1" rows="3"　placeholder=""></textarea>
-                </div>
+            <div class="form">
+                <p class ="required">必須</p>
+                <p class = "form-left">ご依頼内容</p>
 
-                <div class = "form">
-                    <a href="apply-confirm.html" class="button-fill">次へ</a>
+                <div class ="form-check-select">
+
+                    <div>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        新規制作のご依頼
+                        </label>
+
+                        <select class="form-select">
+                            <option selected>ご依頼内容を選択してください</option>
+                            <option value="Webサイト">Webサイト</option>
+                            <option value="Webサービス">Webサービス</option>
+                        </select>
+                    </div>
+
+                    <div class ="form-check-select-low">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        改修・運用のご依頼
+                        </label>
+                        <input type="url" class="form-control" id="exampleFormControlInput5" placeholder="https://〇〇〇〇.com">
+
+                    </div>
+                    
                 </div>
 
             </div>
-        </div>
-    </div>
-    <footer>
-        <div class = "footer-image">
-            <a href="index.html"><img src="images/logo2.png"></a> 
-        </div>
-        <div class ="policies">
-            <ul>
-                <li><a href="#">セキュリティーポリシー</a></li>
-                <li><a href="#">プライバシーポリシー</a></li>
-            </ul>
-        </div>
-        <p>Copyright © 2021 bluenosekai All Rights Reserved.</p>
-    </footer>    
 
-    <script src="script.js"></script>
-</body>
-</html>
+
+
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput5" class="form-label form-left">想定予算</label>
+                <input type="text" class="form-control form-right" id="exampleFormControlInput5">
+            </div>
+
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput5" class="form-label form-left">ご希望納期</label>
+                <input type="text" class="form-control form-right" id="exampleFormControlInput5">
+            </div>
+
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlTextarea1" class="form-label form-left">目的・概要</label>
+                <textarea class="form-control form-right" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
+            </div>
+
+            <div class = "form">
+                <input type="submit" href="/apply" class="button-fill" value="次へ">
+            </div>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

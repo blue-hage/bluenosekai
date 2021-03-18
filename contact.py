@@ -7,12 +7,12 @@ from mail import contact_create
 bp = Blueprint("contact", __name__, url_prefix="/contact")
 
 
-# @bp.route("/")
-# def index():
-#     return render_template("contact.html")
+@bp.route("/")
+def index():
+    return render_template("contact.html")
 
 # contact zone
-@bp.route("/", methods=["GET", "POST"])
+@bp.route("/question", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
         name = request.form["name"]
