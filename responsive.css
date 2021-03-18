@@ -1,0 +1,449 @@
+/*タブレット*/
+
+@media all and (max-width: 1000px) {
+    .header-menu{
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+    .catchphrase{
+        display: none;
+    }
+
+    .catchphrase2{
+        display: inline-block;
+        position: absolute;
+        top: 30%;
+        margin-left: 15%;
+        width: 62%;
+    }
+
+    .catchphrase2 p{
+       font-size: 25px;
+    }
+    
+    .catchphrase2 span{
+        font-size: 50px;
+    }
+    
+    .earth{
+        text-align: right;
+        width: 30%;
+        margin-left: 55%;
+        padding-top: 5%;
+    }
+
+    .web-left{
+        display:block;
+        margin: 0 auto;
+        width: 85%;
+        margin-bottom: 20px;
+    }
+    
+    .web-right{
+        display: block;
+        margin: 0 auto;
+
+    }
+
+    .web-right{
+        display: none;
+    }
+
+    .sub-title hr{
+        width: 10%;
+    }
+
+    .button-fill2 {
+        padding: 1.5em 4.5em;
+        font-size: 0.8em;
+    }
+
+    .footer-image img{
+        height: 20%;
+        width: 20%;
+    }
+
+    .wrapper{
+        min-height: 85%;
+    }
+    .works-information{
+        display: none;
+    }
+    .slick-slide img {
+        width: 80%;
+        height: 80%;
+    }
+    .slider {
+        width: 90%;
+        margin: 2% auto;
+    }
+
+
+
+    .works-information-mobile h3{
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .works-information-mobile p{
+        font-size: 15px;
+    }
+
+    .works-information-mobile{
+        display: block;
+    }
+    
+    .contact-flow p{
+        font-size: 12px;
+        margin-top: 12px;
+    }
+
+
+    .required{
+        font-size: 12px;
+    }
+    
+    .form{
+        margin-top: 5%;
+    }
+    
+    .form-left{
+        font-size: 12px;
+    }
+    
+    .form-right{
+        width: 40%;
+        height: 25px;
+
+    }
+    
+    .form textarea{
+        width: 40%;
+        display: inline-block;
+        vertical-align: top;
+        height: 80px;
+    }
+
+
+    .form-confirm-question p{
+        font-size: 12px;
+    }
+
+    .form-confirm-answer p{
+        font-size: 12px;
+    }
+
+    .form-check{
+        margin-top: 5%;
+    }
+
+    .form-check-label{
+        font-size: 12px;
+    }
+
+    .form-select{
+        font-size: 10px;
+        height:26px;
+    }
+
+    .form-control{
+        height: 25px;
+    }
+
+    .member h3{
+        font-size: 20px;
+    }
+
+    .profile h3{
+        font-size: 20px;
+    }
+
+    .profile-information{
+        margin:3% auto 0 auto;
+    }
+
+
+    .anime img {
+        top: 20%;
+        left: 25%;
+        
+    }
+    
+    input::placeholder{
+        font-size: 12px;
+    }
+
+    .profile-information span{ 
+        display: inline;
+    }
+
+    .profile-information p{
+        font-size: 12px;
+    }
+
+    
+
+      
+}
+
+/*スマホ*/
+@media all and (max-width: 767px){
+    .header-menu{
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+
+    .header-logo{
+        margin-left: 40px;
+    }
+
+    .header-logo img{
+        height: 75px;
+        padding-top: 25px;
+    }
+
+    .catchphrase2{
+        top: 25%;
+        margin-left: 10%;
+    }
+    .catchphrase2 p{
+        font-size: 15px;
+     }
+     
+     .catchphrase2 span{
+         font-size: 30px;
+     }
+
+     .earth{
+        margin-left: 60%;
+    }
+
+    .row p{
+        font-size: 10px;
+    
+    }
+
+    .web-title-text h2{
+        font-size: 20px;
+    }   
+
+    .web-title-text p{
+        font-size: 10px;
+    }   
+
+    .web-information p{
+        font-size: 11px;
+    }
+
+
+
+    .web-right{
+        display: none;
+    }
+
+    .web-left{
+        margin-bottom: 0;
+    }
+
+    .title h2{
+        font-size: 18px;
+    }
+
+    .button-fill {
+        padding: 0.5em 1.0em;
+    }
+
+    .sub-title-text h2{
+        font-size: 20px;
+    }
+
+    .sub-title-text p{
+        font-size: 10px;
+    }
+
+    .sub-title hr{
+        width: 10%;
+    }
+
+    .button-fill2 {
+        padding: 1.0em 5.0em;
+        font-size: 0.8em;
+    }
+
+    .contact-left{
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    .contact-right{
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .contact-text{
+        font-size: 12px;
+    }
+
+
+    .container{
+        margin-top: 10%;
+    }
+
+    
+    .footer-image img{
+       height: 30%;
+       width: 30%;
+    }
+    
+    .policies{
+        font-size: 10px;
+        padding-top: 3%;
+    }
+    
+    footer p{
+        font-size: 12px;
+    }
+ 
+    .main-web-information span{
+        font-size: 18px;
+    } 
+    .main-web-information p{
+        font-size: 11px;
+    } 
+    .main-web-information{
+        margin: 5% 0 15% 0;
+    }
+
+    .slider {
+        width: 100%;
+        margin: 2% auto;
+    }
+    
+    .slick-slide {
+      margin: 0 15px;
+    }
+    
+    .slick-slide img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .works-information-mobile h3{
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .works-information-mobile p{
+        font-size: 10px;
+    }
+
+    .works-information{
+        display: none;
+    }
+
+    .profile-img{
+        height: 50%;
+        width: 50%;
+    }
+
+    .scale{
+        height: 60%;
+        width: 60%;
+    }
+
+
+    .contact-flow{
+        width: 25%;
+    }
+    
+    .contact-flow p{
+        font-size: 10px;
+    }
+
+    .required{
+        padding:0 10px;
+        font-size: 10px;
+    }
+
+    .form{
+        margin-top: 8%;
+    }
+
+
+    .form-left{
+        display: block;
+        text-align: center;        
+        width: 100%;
+        padding-left: 0;
+        margin-top: -10px;
+    }
+
+    .form-right{
+        height: 25px;
+        display: block;
+        width: 80%;
+        margin: 0 auto;    
+}
+    
+    .form textarea{
+        width: 80%;
+        height: 60px;
+    }
+
+
+    .form-confirm-question{
+        width: 45%;
+    }
+    
+    .form-confirm-answer{
+        width: 45%;
+    }
+
+
+    .form-check-select{
+        width: 80%;
+        margin-top: -10px;
+    }
+
+    .member p{
+        font-size: 10px;
+    }
+
+    .member h3{
+        font-size: 18px;
+    }
+
+    .member span{
+        display: inline;
+    }
+
+    .profile-information{
+        width: 80%;
+    }
+
+    .profile h3{
+        font-size: 18px;
+    }
+
+    .profile-information{
+        margin:5% auto 0 auto;
+    }
+
+    .anime img {
+        top: 20%;
+        left: 10%;
+        width: 80%;
+    }
+
+
+
+}
+
+
+
