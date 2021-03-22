@@ -67,24 +67,24 @@
                 <div class ="form-check-select">
 
                     <div>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" name="which" value="新規製作のご依頼" required>
+                        <input class="form-check-input" type="radio" id="flexRadioDefault1" value="新規製作のご依頼" name="options" required>
                         <label class="form-check-label" for="flexRadioDefault1">
                         新規制作のご依頼
                         </label>
 
                         <select class="form-select" name="detail">
                             <option selected>ご依頼内容を選択してください</option>
-                            <option value="Webサイト">Webサイト</option>
-                            <option value="Webサービス">Webサービス</option>
+                            <option>Webサイト</option>
+                            <option>Webサービス</option>
                         </select>
                     </div>
 
                     <div class ="form-check-select-low">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" name="which" value="改修・運用のご依頼">
-                        <label class="form-check-label" for="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" id="flexRadioDefault2" value="改修・運用のご依頼" name="options">
+                        <label class="form-check-label" for="flexRadioDefault2">
                         改修・運用のご依頼
                         </label>
-                        <input type="url" class="form-control" id="exampleFormControlInput5" placeholder="https://〇〇〇〇.com" name="detail">
+                        <input type="url" class="form-control" id="exampleFormControlInput5" placeholder="https://〇〇〇〇.com" name="url">
 
                     </div>
                     
@@ -96,14 +96,14 @@
 
             <div class = "form">
                 <p class ="required">必須</p>
-                <label for="exampleFormControlInput5" class="form-label form-left">想定予算</label>
+                <label for="exampleFormControlInput5" class="form-label form-left">想定予算（円）</label>
                 <input type="text" class="form-control form-right" id="exampleFormControlInput5" name="budget" required>
             </div>
 
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlInput5" class="form-label form-left">ご希望納期</label>
-                <input type="text" class="form-control form-right" id="exampleFormControlInput5" name="deadline" required>
+                <input type="text" class="form-control form-right" id="exampleFormControlInput5" name="deadline" placeholder="1週間・1ヶ月など" required>
             </div>
 
             <div class = "form">
@@ -117,7 +117,6 @@
             </div>
         </form>
         {% endif %}
-
 
         {% if context %}
         <form method="POST">
@@ -157,24 +156,24 @@
                 <div class ="form-check-select">
 
                     <div>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" name="detail" value="{{ context.detail }}" name="which" required>
+                        <input class="form-check-input" type="radio" id="flexRadioDefault1" value="新規製作のご依頼" name="options" required>
                         <label class="form-check-label" for="flexRadioDefault1">
                         新規制作のご依頼
                         </label>
 
                         <select class="form-select" name="detail">
                             <option selected>ご依頼内容を選択してください</option>
-                            <option value="Webサイト">Webサイト</option>
-                            <option value="Webサービス">Webサービス</option>
+                            <option value="新規Webサイト製作">Webサイト</option>
+                            <option value="新規Webサービス製作">Webサービス</option>
                         </select>
                     </div>
 
                     <div class ="form-check-select-low">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" name="which">
-                        <label class="form-check-label" for="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" id="flexRadioDefault2" value="改修・運用のご依頼" name="options">
+                        <label class="form-check-label" for="flexRadioDefault2">
                         改修・運用のご依頼
                         </label>
-                        <input type="url" class="form-control" id="exampleFormControlInput5" placeholder="https://〇〇〇〇.com" name="detail">
+                        <input type="url" class="form-control" id="exampleFormControlInput5" placeholder="https://〇〇〇〇.com" name="url">
 
                     </div>
                     
@@ -186,14 +185,14 @@
 
             <div class = "form">
                 <p class ="required">必須</p>
-                <label for="exampleFormControlInput5" class="form-label form-left">想定予算</label>
+                <label for="exampleFormControlInput5" class="form-label form-left">想定予算（円）</label>
                 <input type="text" class="form-control form-right" id="exampleFormControlInput5" name="budget" value="{{ context.budget }}" required>
             </div>
 
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlInput5" class="form-label form-left">ご希望納期</label>
-                <input type="text" class="form-control form-right" id="exampleFormControlInput5" name="deadline" value="{{ context.deadline }}" required>
+                <input type="text" class="form-control form-right" id="exampleFormControlInput5" name="deadline" placeholder="1週間・1ヶ月など" value="{{ context.deadline }}" required>
             </div>
 
             <div class = "form">

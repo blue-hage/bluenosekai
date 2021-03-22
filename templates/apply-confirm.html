@@ -33,6 +33,7 @@
             <input type="hidden" name="name" value="{{ context.name }}" required>
             <input type="hidden" name="email" value="{{ context.email }}" required>
             <input type="hidden" name="tel" value="{{ context.tel }}" required>
+            <input type="hidden" name="options" value="{{ context.options }}" required>
             <input type="hidden" name="detail" value="{{ context.detail }}" required>
             <input type="hidden" name="budget" value="{{ context.budget }}" required>
             <input type="hidden" name="deadline" value="{{ context.deadline }}" required>
@@ -71,8 +72,7 @@
                     <p>ご依頼内容　:</p>
                 </div>
                 <div class = "form-confirm-answer">
-                    <p>{{ context.which }}</p>
-                    <p>{{ context.detail }}</p>
+                    <p>{{ context.options }}({{ context.detail }})</p>
                 </div>
             </div>
     

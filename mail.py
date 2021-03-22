@@ -54,7 +54,7 @@ def contact_create(email, name, contents, *args):
     メールアドレス:　{1}
     電話番号:　{2}
     ご依頼内容:　{3}({4})
-    想定予算: {5}
+    想定予算: {5}円
     ご希望納期: {6}
     目的・概要:　{7}
     """.format(name, email, args[0], args[1], args[2], args[3], args[4], contents)
@@ -64,7 +64,7 @@ def contact_create(email, name, contents, *args):
     メールアドレス:　{1}
     電話番号:　{2}
     ご依頼内容:　{3}({4})
-    想定予算: {5}
+    想定予算: {5}円
     ご希望納期: {6}
     目的・概要:　{7}
     """.format(name, email, args[0], args[1], args[2], args[3], args[4], contents)

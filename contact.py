@@ -62,8 +62,9 @@ def apply():
         email = request.form["email"]
         confirm = request.form["confirm"]
         tel = request.form["tel"]
-        which = request.form["which"]
+        options = request.form["options"]
         detail = request.form["detail"]
+        url = request.form.get("url")
         budget = request.form["budget"]
         deadline = request.form["deadline"]
         body = request.form["body"]
@@ -77,7 +78,7 @@ def apply():
             error = "メールアドレスが違います。"
         elif not tel:
             error = "電話番号を入力してください。"
-        elif not which:
+        elif not options:
             error = "ご依頼内容を選択してください。"
         elif not detail:
             error = "ご依頼内容を入力してください。"
@@ -88,13 +89,17 @@ def apply():
         elif not body:
             error = "目的・概要を入力してください。"
 
-
         if error is None:
-            context = {"name":name, "email":email, "tel":tel, "which":which, "detail":detail, "budget":budget, "deadline":deadline, "body":body}
+            if options == "改修・運用のご依頼":
+                detail = url
+                if not url:
+                    detail = "URLを入力してください"
+
+            context = {"name":name, "email":email, "tel":tel, "options":options, "detail":detail, "budget":budget, "deadline":deadline, "body":body}
             return render_template("apply-confirm.html", context=context)
         
         flash(error)
-        context = {"name":name, "email":email, "tel":tel, "which":which, "detail":detail, "budget":budget, "deadline":deadline, "body":body}
+        context = {"name":name, "email":email, "tel":tel, "options":options, "detail":detail, "budget":budget, "deadline":deadline, "body":body}
         return render_template("apply-form.html", context=context)
     
     return render_template("apply-form.html")
@@ -105,7 +110,7 @@ def send_application():
         name = request.form["name"]
         email = request.form["email"]
         tel = request.form["tel"]
-        which = request.form["which"]
+        options = request.form["options"]
         detail = request.form["detail"]
         budget = request.form["budget"]
         deadline = request.form["deadline"]
@@ -113,7 +118,7 @@ def send_application():
 
         # exec("INSERT INTO contact (name, email, tel, detail, budget, deadline, body) VALUES (%s, %s, %s, %s, %s, %s, %s)", 
         # name, email, tel, detail, budget, deadline, body)
-        contact_create(email, name, body, tel, which, detail, budget, deadline, body)
+        contact_create(email, name, body, tel, options, detail, budget, deadline, body)
         return redirect("/contact/msg/1")
     
     return render_template("apply-form.html")
