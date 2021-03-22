@@ -55,6 +55,8 @@ def send_apply():
     
     return render_template("contact-form.html")
 
+    return render_template("contact-form.html")
+
 #apply zone
 @bp.route("/apply", methods=["GET", "POST"])
 def apply():
