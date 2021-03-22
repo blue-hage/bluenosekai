@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block slick_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/slick/slick.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/slick/slick-theme.css') }}">
+{% endblock %}
+
 {% block content %}
 <div class = "each-page">
     <div class="container no-scroll">
@@ -71,4 +76,10 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block slick_js %}
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='css/slick/slick.min.js') }}"></script>
 {% endblock %}

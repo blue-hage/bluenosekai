@@ -18,7 +18,7 @@
         </div>
 
         <div class = "contact-flow" style="border: 2px solid black;">
-        <p>項目の入力</p>
+            <p>項目の入力</p>
         </div>
         <div class = "arrow">→</div>
         <div class = "contact-flow">
@@ -29,38 +29,71 @@
             <p>送信完了</p>
         </div>
 
+        {% if not context %}
         <form method="POST">
+            {% for message in get_flashed_messages() %}
+            <div class="text-danger form">{{ message }}</div>
+            {% endfor %}
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlInput1" class="form-label form-left">会社名 / 個人名</label>
-                <input type="text" class="form-control form-right" id="exampleFormControlInput1" placeholder="〇〇株式会社">
+                <input type="text" class="form-control form-right" id="exampleFormControlInput1" placeholder="〇〇株式会社、又は〇〇太郎" name="name" required>
             </div>
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlInput2" class="form-label form-left">メールアドレス</label>
-                <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com" name="email" required>
             </div>
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlInput3" class="form-label form-left">メールアドレス再入力</label>
-                <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com">
-            </div>
-
-            <div class = "form">
-                <p class ="required">必須</p>
-                <label for="exampleFormControlInput4" class="form-label form-left">電話番号</label>
-                <input type="number" class="form-control form-right" id="exampleFormControlInput1" placeholder="00-0000-0000">
+                <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com" name="confirm" required>
             </div>
 
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlTextarea1" class="form-label form-left">お問い合わせ内容</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="body" required></textarea>
             </div>
+
             <div class = "form">
                 <input type="submit" class="button-fill" value="次へ">
             </div>
         </form>
+        {% endif %}
+
+        {% if context %}
+        <form method="POST">
+            {% for message in get_flashed_messages() %}
+            <div class="text-danger form">{{ message }}</div>
+            {% endfor %}
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput1" class="form-label form-left">会社名 / 個人名</label>
+                <input type="text" class="form-control form-right" id="exampleFormControlInput1" placeholder="〇〇株式会社、又は〇〇太郎" name="name" value="{{ context.name }}" required>
+            </div>
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput2" class="form-label form-left">メールアドレス</label>
+                <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com" name="email" value="{{ context.email }}" required>
+            </div>
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput3" class="form-label form-left">メールアドレス再入力</label>
+                <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com" name="confirm" required>
+            </div>
+
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlTextarea1" class="form-label form-left">お問い合わせ内容</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="body" required>{{ context.body }}</textarea>
+            </div>
+
+            <div class = "form">
+                <input type="submit" class="button-fill" value="次へ">
+            </div>
+        </form>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

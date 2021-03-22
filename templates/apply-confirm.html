@@ -29,76 +29,86 @@
             <p>送信完了</p>
         </div>
 
-        <div class = "form">
-            <div class = "form-confirm-question">
-                <p>会社名 / 個人名　:</p>
-            </div>
-            <div class = "form-confirm-answer">
-                <p>〇〇株式会社</p>
-            </div>
-            
-        </div>
+        <form method="POST" action="/contact/send_application">
+            <input type="hidden" name="name" value="{{ context.name }}" required>
+            <input type="hidden" name="email" value="{{ context.email }}" required>
+            <input type="hidden" name="tel" value="{{ context.tel }}" required>
+            <input type="hidden" name="detail" value="{{ context.detail }}" required>
+            <input type="hidden" name="budget" value="{{ context.budget }}" required>
+            <input type="hidden" name="deadline" value="{{ context.deadline }}" required>
+            <textarea hidden name="body" required>{{ context.body }}</textarea>
 
-        <div class = "form">
-            <div class = "form-confirm-question">
-                <p>メールアドレス　:</p>
+            <div class = "form">
+                <div class = "form-confirm-question">
+                    <p>会社名 / 個人名　:</p>
+                </div>
+                <div class = "form-confirm-answer">
+                    <p>{{ context.name }}</p>
+                </div>
+                
             </div>
-            <div class = "form-confirm-answer">
-                <p>〇〇@gmail.com</p>
-            </div>
-        </div>
-
-        <div class = "form">
-            <div class = "form-confirm-question">
-                <p>電話番号　:</p>
-            </div>
-            <div class = "form-confirm-answer">
-                <p>00-0000-0000</p>
-            </div>
-        </div>
-
-        <div class = "form">
-            <div class = "form-confirm-question">
-                <p>ご依頼内容　:</p>
-            </div>
-            <div class = "form-confirm-answer">
-                <p>新規制作のご依頼or改修運用のご依頼</p>
-                <p>iagjijgjei</p>
-            </div>
-        </div>
-
-        <div class = "form">
-            <div class = "form-confirm-question">
-                <p>想定予算　:</p>
-            </div>
-            <div class = "form-confirm-answer">
-                <p>じぇふぉ円</p>
     
+            <div class = "form">
+                <div class = "form-confirm-question">
+                    <p>メールアドレス　:</p>
+                </div>
+                <div class = "form-confirm-answer">
+                    <p>{{ context.email }}</p>
+                </div>
             </div>
-        </div>
-
-        <div class = "form">
-            <div class = "form-confirm-question">
-                <p>ご希望納期　:</p>
-            </div>
-            <div class = "form-confirm-answer">
-                <p>三月</p>
     
+            <div class = "form">
+                <div class = "form-confirm-question">
+                    <p>電話番号　:</p>
+                </div>
+                <div class = "form-confirm-answer">
+                    <p>{{ context.tel }}</p>
+                </div>
             </div>
-        </div>
-
-        <div class = "form">
-            <div class = "form-confirm-question">
-                <p>目的・概要　:</p>
+    
+            <div class = "form">
+                <div class = "form-confirm-question">
+                    <p>ご依頼内容　:</p>
+                </div>
+                <div class = "form-confirm-answer">
+                    <p>{{ context.which }}</p>
+                    <p>{{ context.detail }}</p>
+                </div>
             </div>
-            <div class = "form-confirm-answer">
-                <p>waxれいあふぁうぃjがをじぇがwhgじゃいぐぃjqwrくぇrくぇrqwrwqrqwくぇとqごkg</p>
+    
+            <div class = "form">
+                <div class = "form-confirm-question">
+                    <p>想定予算　:</p>
+                </div>
+                <div class = "form-confirm-answer">
+                    <p>{{ context.budget }}円</p>
+        
+                </div>
             </div>
-        </div>
-
-        <div class = "form">
-            <a href="msg.html" class="button-fill">次へ</a>
-        </div>
+    
+            <div class = "form">
+                <div class = "form-confirm-question">
+                    <p>ご希望納期　:</p>
+                </div>
+                <div class = "form-confirm-answer">
+                    <p>{{ context.deadline }}</p>
+        
+                </div>
+            </div>
+    
+            <div class = "form">
+                <div class = "form-confirm-question">
+                    <p>目的・概要　:</p>
+                </div>
+                <div class = "form-confirm-answer">
+                    <p>{{ context.body }}</p>
+                </div>
+            </div>
+    
+            <div class = "form">
+                <input type="submit" class="button-fill" value="送信">
+            </div>
+        </form>
 
     </div>
 </div>

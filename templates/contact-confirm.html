@@ -29,13 +29,17 @@
             <p>送信完了</p>
         </div>
 
-        <form method="POST">
+        <form action="/contact/send_contact" method="POST">
+            <input type="hidden" name="name" value="{{ context.name }}" required>
+            <input type="hidden" name="email" value="{{ context.email }}" required>
+            <textarea name="body" hidden required>{{ context.body }}</textarea>
+
             <div class = "form">
                 <div class = "form-confirm-question">
                     <p>会社名 / 個人名:</p>
                 </div>
                 <div class = "form-confirm-answer">
-                    <p>〇〇株式会社</p>
+                    <p>{{ context.name }}</p>
                 </div>
                 
             </div>
@@ -45,16 +49,7 @@
                     <p>メールアドレス:</p>
                 </div>
                 <div class = "form-confirm-answer">
-                    <p>〇〇@gmail.com</p>
-                </div>
-            </div>
-
-            <div class = "form">
-                <div class = "form-confirm-question">
-                    <p>電話番号:</p>
-                </div>
-                <div class = "form-confirm-answer">
-                    <p>00-0000-0000</p>
+                    <p>{{ context.email }}</p>
                 </div>
             </div>
 
@@ -63,12 +58,12 @@
                     <p>お問い合わせ内容:</p>
                 </div>
                 <div class = "form-confirm-answer">
-                    <p>waxれいあふぁうぃjがをじぇがwhgじゃいぐぃjqwrくぇrくぇrqwrwqrqwくぇとqごkg</p>
+                    <p>{{ context.body }}</p>
                 </div>
             </div>
 
             <div class = "form">
-                <input type="submit" class="button-fill" value="次へ">
+                <input type="submit" class="button-fill" value="送信">
             </div>
         </form>
 

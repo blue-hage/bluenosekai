@@ -29,27 +29,31 @@
             <p>送信完了</p>
         </div>
 
+        {% if not context %}
         <form method="POST">
+            {% for message in get_flashed_messages() %}
+            <div class="text-danger form">{{ message }}</div>
+            {% endfor %}
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlInput1" class="form-label form-left">会社名 / 個人名</label>
-                <input type="text" class="form-control form-right" id="exampleFormControlInput1" placeholder="〇〇株式会社">
+                <input type="text" class="form-control form-right" id="exampleFormControlInput1" placeholder="〇〇株式会社" name="name" required>
             </div>
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlInput2" class="form-label form-left">メールアドレス</label>
-                <input type="email" class="form-control form-right" id="exampleFormControlInput2" placeholder="name@example.com">
+                <input type="email" class="form-control form-right" id="exampleFormControlInput2" placeholder="name@example.com" name="email" required>
             </div>
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlInput3" class="form-label form-left">メールアドレス再入力</label>
-                <input type="email" class="form-control form-right" id="exampleFormControlInput3" placeholder="name@example.com">
+                <input type="email" class="form-control form-right" id="exampleFormControlInput3" placeholder="name@example.com" name="confirm" required>
             </div>
 
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlInput4" class="form-label form-left">電話番号</label>
-                <input type="number" class="form-control form-right" id="exampleFormControlInput4" placeholder="00-0000-0000">
+                <input type="tel" class="form-control form-right" id="exampleFormControlInput4" placeholder="00-0000-0000" name="tel" required>
             </div>
 
 
@@ -63,12 +67,12 @@
                 <div class ="form-check-select">
 
                     <div>
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" name="which" value="新規製作のご依頼" required>
                         <label class="form-check-label" for="flexRadioDefault1">
                         新規制作のご依頼
                         </label>
 
-                        <select class="form-select">
+                        <select class="form-select" name="detail">
                             <option selected>ご依頼内容を選択してください</option>
                             <option value="Webサイト">Webサイト</option>
                             <option value="Webサービス">Webサービス</option>
@@ -76,11 +80,11 @@
                     </div>
 
                     <div class ="form-check-select-low">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" name="which" value="改修・運用のご依頼">
                         <label class="form-check-label" for="flexRadioDefault1">
                         改修・運用のご依頼
                         </label>
-                        <input type="url" class="form-control" id="exampleFormControlInput5" placeholder="https://〇〇〇〇.com">
+                        <input type="url" class="form-control" id="exampleFormControlInput5" placeholder="https://〇〇〇〇.com" name="detail">
 
                     </div>
                     
@@ -93,25 +97,116 @@
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlInput5" class="form-label form-left">想定予算</label>
-                <input type="text" class="form-control form-right" id="exampleFormControlInput5">
+                <input type="text" class="form-control form-right" id="exampleFormControlInput5" name="budget" required>
             </div>
 
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlInput5" class="form-label form-left">ご希望納期</label>
-                <input type="text" class="form-control form-right" id="exampleFormControlInput5">
+                <input type="text" class="form-control form-right" id="exampleFormControlInput5" name="deadline" required>
             </div>
 
             <div class = "form">
                 <p class ="required">必須</p>
                 <label for="exampleFormControlTextarea1" class="form-label form-left">目的・概要</label>
-                <textarea class="form-control form-right" id="exampleFormControlTextarea1" rows="3" placeholder=""></textarea>
+                <textarea class="form-control form-right" id="exampleFormControlTextarea1" rows="3" placeholder="制作依頼や改修依頼するWEBサイト・WEBサービスの運用目的など" name="body" required></textarea>
             </div>
 
             <div class = "form">
-                <input type="submit" href="/apply" class="button-fill" value="次へ">
+                <input type="submit" class="button-fill" value="次へ">
             </div>
         </form>
+        {% endif %}
+
+
+        {% if context %}
+        <form method="POST">
+            {% for message in get_flashed_messages() %}
+            <div class="text-danger form">{{ message }}</div>
+            {% endfor %}
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput1" class="form-label form-left">会社名 / 個人名</label>
+                <input type="text" class="form-control form-right" id="exampleFormControlInput1" placeholder="〇〇株式会社" name="name" value="{{ context.name }}" required>
+            </div>
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput2" class="form-label form-left">メールアドレス</label>
+                <input type="email" class="form-control form-right" id="exampleFormControlInput2" placeholder="name@example.com" value="{{ context.email }}" name="email" required>
+            </div>
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput3" class="form-label form-left">メールアドレス再入力</label>
+                <input type="email" class="form-control form-right" id="exampleFormControlInput3" placeholder="name@example.com" name="confirm" required>
+            </div>
+
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput4" class="form-label form-left">電話番号</label>
+                <input type="tel" class="form-control form-right" id="exampleFormControlInput4" placeholder="00-0000-0000" name="tel" value="{{ context.tel }}" required>
+            </div>
+
+
+
+
+
+            <div class="form">
+                <p class ="required">必須</p>
+                <p class = "form-left">ご依頼内容</p>
+
+                <div class ="form-check-select">
+
+                    <div>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" name="detail" value="{{ context.detail }}" name="which" required>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        新規制作のご依頼
+                        </label>
+
+                        <select class="form-select" name="detail">
+                            <option selected>ご依頼内容を選択してください</option>
+                            <option value="Webサイト">Webサイト</option>
+                            <option value="Webサービス">Webサービス</option>
+                        </select>
+                    </div>
+
+                    <div class ="form-check-select-low">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" name="which">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        改修・運用のご依頼
+                        </label>
+                        <input type="url" class="form-control" id="exampleFormControlInput5" placeholder="https://〇〇〇〇.com" name="detail">
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+
+
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput5" class="form-label form-left">想定予算</label>
+                <input type="text" class="form-control form-right" id="exampleFormControlInput5" name="budget" value="{{ context.budget }}" required>
+            </div>
+
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput5" class="form-label form-left">ご希望納期</label>
+                <input type="text" class="form-control form-right" id="exampleFormControlInput5" name="deadline" value="{{ context.deadline }}" required>
+            </div>
+
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlTextarea1" class="form-label form-left">目的・概要</label>
+                <textarea class="form-control form-right" id="exampleFormControlTextarea1" rows="3" placeholder="制作依頼や改修依頼するWEBサイト・WEBサービスの運用目的など" name="body" required>{{ context.body }}</textarea>
+            </div>
+
+            <div class = "form">
+                <input type="submit" class="button-fill" value="次へ">
+            </div>
+        </form>
+        {% endif %}
 
     </div>
 </div>
