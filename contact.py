@@ -38,7 +38,7 @@ def contact():
         
     return render_template("contact-form.html")
 
-@bp.route("/send_contact", methods=["POST"])
+@bp.route("/send_contact", methods=["GET", "POST"])
 def send_apply():
     if request.method == "POST":
         name = request.form["name"]
@@ -48,6 +48,8 @@ def send_apply():
         exec("INSERT INTO contact (name, email, body) VALUES (%s, %s, %s)", name, email, body)
         contact_create(email, name, body)
         return redirect("/msg")
+
+    return render_template("contact-form.html")
 
 #apply zone
 @bp.route("/apply", methods=["GET", "POST"])
@@ -103,6 +105,8 @@ def send_apply():
         name, email, tel, detail, budget, deadline, body)
         contact_create(email, name, body, tel, detail, budget, deadline)
         return redirect("/msg")
+
+    return render_template("apply-form.html")
 
 @bp.route("/msg")
 def msg():
