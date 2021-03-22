@@ -1,7 +1,7 @@
 #!/usr/local/bin/python3
 
 from logging import error
-from os.path import dirname, join, realpath
+from os.path import join
 from flask import(
     Blueprint, flash, g, redirect, render_template, request
 )
@@ -13,7 +13,6 @@ from db import exec, select
 from blog import get_news, get_work
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
-
 ALLOWED_EXTENSIONS = set(['png', 'jpg'])
 
 # news zone

@@ -88,7 +88,7 @@ def apply():
     
     return render_template("apply-form.html")
 
-@bp.route("/send_apply")
+@bp.route("/send_apply", methods=["GET", "POST"])
 def send_apply():
     if request.method == "POST":
         name = request.form["name"]

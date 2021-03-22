@@ -1,8 +1,6 @@
 #!/usr/local/bin/python3
-import mysql.connector
-from flask import g
-
-from flask import current_app, g
+# import mysql.connector
+from flask import g, current_app
 
 config = {
     "host": "localhost",
