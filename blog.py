@@ -19,16 +19,17 @@ def index():
 # news
 @bp.route("/news")
 def news():
-    news = select(
-        "SELECT news.id, title, body, created, author_id, username FROM news JOIN user ON news.author_id = user.id ORDER BY created DESC"
-    )
+    # news = select(
+    #     "SELECT news.id, title, body, created, author_id, username FROM news JOIN user ON news.author_id = user.id ORDER BY created DESC"
+    # )
 
-    if not news:
-        length = 0
-    else:
-        length = len(news)
+    # if not news:
+    #     length = 0
+    # else:
+    #     length = len(news)
         
-    return render_template("news.html", news=news, length=length)
+    # news=news, length=lengthをあとでたす。
+    return render_template("news.html")
 
 def get_news(id, check_author=True):
     news = select(
@@ -64,18 +65,19 @@ def get_work(id, check_author=True):
 
 @bp.route("/works")
 def works():
-    works = select(
-        "SELECT work.id, title, link, work, created, author_id, username"
-        " FROM work JOIN user ON work.author_id = user.id ORDER BY created DESC"
-    )
+    # works = select(
+    #     "SELECT work.id, title, link, work, created, author_id, username"
+    #     " FROM work JOIN user ON work.author_id = user.id ORDER BY created DESC"
+    # )
     
-    if works:
-        length = len(works)
-    else:
-        works = None
-        length = 0
+    # if works:
+    #     length = len(works)
+    # else:
+    #     works = None
+    #     length = 0
 
-    return render_template("works.html", length=length, works=works)
+    # works=works, length=lengthをあとでたす。
+    return render_template("works.html")
 
 @bp.route("/service")
 def service():

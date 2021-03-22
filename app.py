@@ -22,6 +22,3 @@ app.register_blueprint(blog.bp)
 app.register_blueprint(admin.bp)
 
 app.add_url_rule("/", endpoint="index")
-
-if __name__ == "__main__":
-    app.run()

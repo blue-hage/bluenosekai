@@ -6,13 +6,12 @@ from flask import(
 )
 import os, random, string
 
-from app import UPLOAD_FOLDER
 from auth import login_required
 from db import exec, select
 from blog import get_news, get_work
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
-
+UPLOAD_FOLDER='./static/uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg'])
 
 # news zone
