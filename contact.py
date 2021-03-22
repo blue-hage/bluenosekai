@@ -119,7 +119,7 @@ def send_application():
 
         exec("INSERT INTO apply (name, email, tel, options, detail, budget, deadline, body) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", 
         name, email, tel, options, detail, budget, deadline, body)
-        contact_create(email, name, body, tel, options, detail, budget, deadline, body)
+        contact_create(email, name, body, tel, options, detail, budget, deadline)
         return redirect("/contact/msg/1")
     
     return render_template("apply-form.html")
