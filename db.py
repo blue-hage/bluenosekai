@@ -4,9 +4,9 @@ from flask import g, current_app
 
 config = {
     "host": "localhost",
-    "user": "bluroom_takaaki",
-    "password": "20210304",
-    "database": "bluroom_takaaki",
+    "user": "bluroom_bluenosekai",
+    "password": "20210313",
+    "database": "bluroom_bluenosekai",
     "use_unicode": True,
     "charset": "utf8"
 }

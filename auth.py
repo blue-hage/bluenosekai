@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3
 import functools
 from os import error
 

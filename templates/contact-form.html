@@ -1,159 +1,99 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue no sekai official website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="responsive.css">
-    
-</head>
+{% extends "base.html" %}
 
-<body>
-    <div class ="wrapper">
+{% block content %}
+<div class = "each-page">
+    <div class="container no-scroll">
+        <div class = "title">
+            <h2>Contact</h2>
+        </div>
 
-        <header>
-            <div class = "header-logo">
-                <a href="index.html"><img src="images/bluenosekialogo2.png"></a>
-            </div>
-
-            <div class="hamburger-menu">
-                <input type="checkbox" id="menu-btn-check">
-                <label for="menu-btn-check" class="menu-btn"><span></span></label>
-                <div class="menu-content">
-                    <ul>
-                        <li class="close">
-                            <a href="index.html">Top</a>
-                        </li>
-                        <li class="close">
-                            <a href="news.html">News</a>
-                        </li>
-                        <li class="close">
-                            <a href="service.html">Service</a>
-                        </li>
-                        <li class="close">
-                            <a href="works.html">Works</a>
-                        </li>
-                        <li class="close">
-                            <a href="aboutus.html">About us</a>
-                        </li>
-                        <li class="close">
-                            <a href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <ul class="header-menu">
-                <li class="menu">
-                    <a href="index.html">Top</a>
-                </li>
-                <li class="menu">
-                    <a href="news.html">News</a>
-                </li>
-                <li class="menu">
-                    <a href="#">Service</a>
-                </li>
-                <li class="menu">
-                    <a href="works.html">Works</a>
-                </li>
-                <li class="menu">
-                    <a href="aboutus.html">About us</a>
-                </li>
-                <li class="menu">
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-        </header>
-
-        <div class = "each-page">
-            <div class="container no-scroll">
-                <div class = "title">
-                    <h2>Contact</h2>
-                </div>
-
-                
-                <div class = "sub-title">
-                    <hr>
-                    <div class = "sub-title-text">
-                        <h2>お問い合わせ</h2>
-                        <p>Contact Form</p>
-                    </div>
-                    <hr>
-                </div>
-
-                <div class = "contact-flow" style="border: 2px solid black;">
-                <p>項目の入力</p>
-                </div>
-                <div class = "arrow">→</div>
-                <div class = "contact-flow">
-                    <p>入力内容の確認</p>
-                </div>
-                <div class = "arrow">→</div>
-                <div class = "contact-flow">
-                    <p>送信完了</p>
-                </div>
-
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlInput1" class="form-label form-left">会社名 / 個人名</label>
-                    <input type="text" class="form-control form-right" id="exampleFormControlInput1" placeholder="〇〇株式会社">
-                </div>
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlInput2" class="form-label form-left">メールアドレス</label>
-                    <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlInput3" class="form-label form-left">メールアドレス再入力</label>
-                    <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlInput4" class="form-label form-left">電話番号</label>
-                    <input type="number" class="form-control form-right" id="exampleFormControlInput1" placeholder="00-0000-0000">
-                </div>
-
-                <div class = "form">
-                    <p class ="required">必須</p>
-                    <label for="exampleFormControlTextarea1" class="form-label form-left">お問い合わせ内容</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class = "form">
-                    <a href="contact-confirm.html" class="button-fill">次へ</a>
-                </div>
-
-                
-
-                
         
-                
-                
-
-
-
+        <div class = "sub-title">
+            <hr>
+            <div class = "sub-title-text">
+                <h2>お問い合わせ</h2>
+                <p>Contact Form</p>
             </div>
+            <hr>
         </div>
-    </div>
-    <footer>
-        <div class = "footer-image">
-            <a href="index.html"><img src="images/logo2.png"></a> 
-        </div>
-        <div class ="policies">
-            <ul>
-                <li><a href="#">セキュリティーポリシー</a></li>
-                <li><a href="#">プライバシーポリシー</a></li>
-            </ul>
-        </div>
-        <p>Copyright © 2021 bluenosekai All Rights Reserved.</p>
-    </footer>    
 
-    <script src="script.js"></script>
-</body>
-</html>
+        <div class = "contact-flow" style="border: 2px solid black;">
+            <p>項目の入力</p>
+        </div>
+        <div class = "arrow">→</div>
+        <div class = "contact-flow">
+            <p>入力内容の確認</p>
+        </div>
+        <div class = "arrow">→</div>
+        <div class = "contact-flow">
+            <p>送信完了</p>
+        </div>
+
+        {% if not context %}
+        <form method="POST">
+            {% for message in get_flashed_messages() %}
+            <div class="text-danger form">{{ message }}</div>
+            {% endfor %}
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput1" class="form-label form-left">会社名 / 個人名</label>
+                <input type="text" class="form-control form-right" id="exampleFormControlInput1" placeholder="〇〇株式会社、又は〇〇太郎" name="name" required>
+            </div>
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput2" class="form-label form-left">メールアドレス</label>
+                <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com" name="email" required>
+            </div>
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput3" class="form-label form-left">メールアドレス再入力</label>
+                <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com" name="confirm" required>
+            </div>
+
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlTextarea1" class="form-label form-left">お問い合わせ内容</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="body" required></textarea>
+            </div>
+
+            <div class = "form">
+                <input type="submit" class="button-fill" value="次へ">
+            </div>
+        </form>
+        {% endif %}
+
+        {% if context %}
+        <form method="POST">
+            {% for message in get_flashed_messages() %}
+            <div class="text-danger form">{{ message }}</div>
+            {% endfor %}
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput1" class="form-label form-left">会社名 / 個人名</label>
+                <input type="text" class="form-control form-right" id="exampleFormControlInput1" placeholder="〇〇株式会社、又は〇〇太郎" name="name" value="{{ context.name }}" required>
+            </div>
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput2" class="form-label form-left">メールアドレス</label>
+                <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com" name="email" value="{{ context.email }}" required>
+            </div>
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlInput3" class="form-label form-left">メールアドレス再入力</label>
+                <input type="email" class="form-control form-right" id="exampleFormControlInput1" placeholder="name@example.com" name="confirm" required>
+            </div>
+
+            <div class = "form">
+                <p class ="required">必須</p>
+                <label for="exampleFormControlTextarea1" class="form-label form-left">お問い合わせ内容</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="body" required>{{ context.body }}</textarea>
+            </div>
+
+            <div class = "form">
+                <input type="submit" class="button-fill" value="次へ">
+            </div>
+        </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

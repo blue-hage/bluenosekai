@@ -6,9 +6,8 @@ import db
 import auth, blog, admin, contact
 
 sentry_sdk.init(
-    "https://e951567e5d324202929db2b21ffe7f21@o543738.ingest.sentry.io/5674088",
-    integrations=[FlaskIntegration()],
-    traces_sample_rate=1.0
+    dsn="https://3312a0c0adb3482c85dc3e330a36dfca@o543738.ingest.sentry.io/5682771",
+    integrations=[FlaskIntegration()]
 )
 
 app = Flask(__name__)
@@ -24,6 +23,3 @@ app.register_blueprint(admin.bp)
 app.register_blueprint(contact.bp)
 
 app.add_url_rule("/", endpoint="index")
-
-if __name__ == "__main__":
-    app.run()
