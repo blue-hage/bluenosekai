@@ -117,7 +117,7 @@ def send_application():
         deadline = request.form["deadline"]
         body = request.form["body"]
 
-        exec("INSERT INTO contact (name, email, tel, options, detail, budget, deadline, body) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", 
+        exec("INSERT INTO apply (name, email, tel, options, detail, budget, deadline, body) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)", 
         name, email, tel, options, detail, budget, deadline, body)
         contact_create(email, name, body, tel, options, detail, budget, deadline, body)
         return redirect("/contact/msg/1")
