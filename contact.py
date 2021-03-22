@@ -48,7 +48,10 @@ def send_apply():
         email = request.form["email"]
         body = request.form["body"]
 
-        exec("INSERT INTO contact (name, email, body) VALUES (%s, %s, %s)", name, email, body)
+        exec(
+            "INSERT INTO contact (name, email, body) VALUES (%s, %s, %s)",
+            name, email, body
+        )
         contact_create(email, name, body)
         return redirect("/contact/msg/0")
     
