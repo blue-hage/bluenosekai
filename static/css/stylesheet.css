@@ -740,6 +740,6 @@ display: none;
     margin-top: -60px;
 }
 
-.col-9 p{
+.col-9 .news-content{
     text-align: left;
 }
