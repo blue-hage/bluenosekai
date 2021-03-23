@@ -46,6 +46,11 @@
                             <li class="close">
                                 <a href="#contact">Contact</a>
                             </li>
+                            {% if g.user %}
+                            <li class="menu">
+                                <a href="/logout">Logout</a>
+                            </li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
@@ -69,6 +74,11 @@
                     <li class="menu">
                         <a href="#contact">Contact</a>
                     </li>
+                    {% if g.user %}
+                    <li class="menu">
+                        <a href="/logout">Logout</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </header>
                 <div class = "main">
