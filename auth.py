@@ -91,7 +91,6 @@ def login():
             error = "パスワードが違います。"
         
         if error is None:
-            print("a")
             session.clear()
             session["user_id"] = user[0][0]
             return redirect("/")
