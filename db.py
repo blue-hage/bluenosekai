@@ -1,5 +1,5 @@
 #!/usr/local/bin/python3
-# import mysql.connector
+import mysql.connector
 from flask import g, current_app
 
 config = {
