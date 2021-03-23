@@ -1,5 +1,4 @@
 html,body{
-    /* scroll-padding-top: 110px; */
     background-color: rgb(243, 243, 243);
     font-family: "Hiragino Mincho ProN";
     height: 100%;
@@ -171,8 +170,9 @@ header {
 .web-right{
     display: inline-block;
     width: 40%;
-    padding-left: 10%;
     vertical-align: bottom;
+    padding-left: 5%;
+    padding-bottom: 1%;
 }
 
 .web-title-text{
@@ -197,8 +197,8 @@ header {
 
 
 .web-right img{
-    height: 320px;
-    width: 400px;
+    height: 310px;
+    width: 380px;
 }
 
 
