@@ -443,6 +443,20 @@
 
 
 
+
+    .policy h3{
+        font-size: 17px;
+    }
+    
+    .policy p{
+        font-size: 12px;
+    }
+    .policy li{
+        font-size: 12px;    
+    }
+
+
+
 }
 
 

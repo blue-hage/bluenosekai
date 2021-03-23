@@ -283,7 +283,7 @@ footer{
     margin-top: 5%;
     text-align: center;
     background-color: #fafafa;
-    box-shadow: 0 -1px 2px #bbb;
+    box-shadow: 0 -2px 5px #bbb;
     font-size: 90%;
     padding-bottom: 1px;
 }
@@ -706,3 +706,25 @@ display: none;
 .profile-information span{ 
     display: none;
 }
+
+
+
+/*policy*/
+.policy{
+    width: 80%;
+    margin: 20px auto 0 auto;
+}
+
+.policy h3{
+    font-size: 20px;
+    text-align: left;
+}
+
+.policy p{
+    text-align: left;
+}
+
+.policy li{
+    text-align: left;
+}
+
