@@ -1,5 +1,5 @@
 html,body{
-    scroll-padding-top: 110px;
+    /* scroll-padding-top: 110px; */
     background-color: rgb(243, 243, 243);
     font-family: "Hiragino Mincho ProN";
     height: 100%;
@@ -171,6 +171,7 @@ header {
 .web-right{
     display: inline-block;
     width: 40%;
+    padding-left: 10%;
     vertical-align: bottom;
 }
 
@@ -546,7 +547,9 @@ footer p{
   .button-fill2 {
     position: relative;
     display: inline-block;
-    padding: 1.5em 4.5em;
+    padding-top: 20px;
+    height: 70px;
+    width: 270px;
     font-size: 1em;
     color: #00b5ad;
     text-decoration: none;
@@ -728,3 +731,11 @@ display: none;
     text-align: left;
 }
 
+
+
+
+
+.scroll{
+    padding-top: 60px;
+    margin-top: -60px;
+}

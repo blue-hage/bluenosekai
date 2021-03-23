@@ -56,7 +56,8 @@
     }
 
     .button-fill2 {
-        padding: 1.5em 4.5em;
+        height: 60px;
+        width: 260px;
         font-size: 0.8em;
     }
 
@@ -270,8 +271,10 @@
     }
 
     .button-fill2 {
-        padding: 1.0em 5.0em;
-        font-size: 0.8em;
+        padding-top: 15px;
+        margin-bottom: 10px;
+        height: 50px;
+        width: 230px;
     }
 
     .contact-left{
