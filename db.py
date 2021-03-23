@@ -28,7 +28,7 @@ def exec(sql, *args):
     c = db.cursor()
     c.execute(sql, args)
     db.commit()
-    return c.lastrowid
+    return c
 
 def select(sql, *args):
     db = open_db()

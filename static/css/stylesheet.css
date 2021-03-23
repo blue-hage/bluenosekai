@@ -1,5 +1,4 @@
 html,body{
-    scroll-padding-top: 110px;
     background-color: rgb(243, 243, 243);
     font-family: "Hiragino Mincho ProN";
     height: 100%;
@@ -172,6 +171,8 @@ header {
     display: inline-block;
     width: 40%;
     vertical-align: bottom;
+    padding-left: 5%;
+    padding-bottom: 1%;
 }
 
 .web-title-text{
@@ -196,8 +197,8 @@ header {
 
 
 .web-right img{
-    height: 320px;
-    width: 400px;
+    height: 310px;
+    width: 380px;
 }
 
 
@@ -283,7 +284,7 @@ footer{
     margin-top: 5%;
     text-align: center;
     background-color: #fafafa;
-    box-shadow: 0 -1px 2px #bbb;
+    box-shadow: 0 -2px 5px #bbb;
     font-size: 90%;
     padding-bottom: 1px;
 }
@@ -331,7 +332,7 @@ footer p{
     padding: 100px 0 0 0;
 } 
 
-.col-9 a{
+.col-8 a{
     color: black;
     text-decoration: none;
 }
@@ -546,7 +547,9 @@ footer p{
   .button-fill2 {
     position: relative;
     display: inline-block;
-    padding: 1.5em 4.5em;
+    padding-top: 20px;
+    height: 70px;
+    width: 270px;
     font-size: 1em;
     color: #00b5ad;
     text-decoration: none;
@@ -705,4 +708,38 @@ display: none;
 
 .profile-information span{ 
     display: none;
+}
+
+
+
+/*policy*/
+.policy{
+    width: 80%;
+    margin: 20px auto 0 auto;
+}
+
+.policy h3{
+    font-size: 20px;
+    text-align: left;
+}
+
+.policy p{
+    text-align: left;
+}
+
+.policy li{
+    text-align: left;
+}
+
+
+
+
+
+.scroll{
+    padding-top: 60px;
+    margin-top: -60px;
+}
+
+.news-content{
+    text-align: left;
 }

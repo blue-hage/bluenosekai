@@ -4,20 +4,23 @@
 <div class = "each-page">
     <div class="container no-scroll">
         <div class = "title">
-            <h2>Login</h2>
+            <h2>Register</h2>
         </div>
 
         <form method="POST">
             {% for message in get_flashed_messages() %}
             <div class="text-danger form">{{ message }}</div>
             {% endfor %}
-            <label for="loginId" class="form-label">Username</label>
-            <input type="text" class="form-control" id="newsTitle" name="username" required>
+            <label for="loginId" class="form-label">ID</label>
+            <input class="form-control" id="newsTitle" name="username" required>
             <br>
             <label for="loginPassword" class="form-label">Password</label>
             <input type="password" class="form-control" id="loginPassword" name="password" required>
             <br>
-            <input type="submit" class="btn btn-primary" value="Login">
+            <label for="loginPassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="loginPassword" name="confirm" required>
+            <br>
+            <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
 </div>

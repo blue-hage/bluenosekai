@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue no sekai official website</title>
+    <title>ぶるーノせかい | 起業を応援するウェブ制作</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -46,6 +47,11 @@
                             <li class="close">
                                 <a href="#contact">Contact</a>
                             </li>
+                            {% if g.user %}
+                            <li class="close">
+                                <a href="{{ url_for('auth.logout') }}">Logout</a>
+                            </li>
+                            {% endif %}
                         </ul>
                     </div>
                 </div>
@@ -69,6 +75,11 @@
                     <li class="menu">
                         <a href="#contact">Contact</a>
                     </li>
+                    {% if g.user %}
+                    <li class="menu">
+                        <a href="{{ url_for('auth.logout') }}'">Logout</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </header>
                 <div class = "main">
@@ -88,7 +99,7 @@
                 </div>
 
 
-                <div class = "news" id ="news">
+                <div class = "news scroll" id ="news">
                     <div class = "container no-scroll">
                         <div class ="fade-text no-scroll">
                             <div class = "title">
@@ -100,28 +111,15 @@
 
                             <!-- news -->
                             <div class = "row">
-                                <div class = "col-3">
-                                    <p>2021.03.01</p>
+                                <div class = "col-4">
+                                    <p>2021.03.23</p>
                                 </div>
-                                <div class = "col-9">
-                                    <a data-toggle="collapse" href="news.html#news1" aria-expanded="false" aria-controls="news1">
+                                <div class = "col-8">
+                                    <a data-toggle="collapse" href="/news" aria-expanded="false" aria-controls="news1">
                                         <p class="line-clamp">ぶるーノせかいへようこそ</p>
                                     </a>
                                 </div>
                             </div>
-
-                            <div class = "row">
-                                <div class = "col-3">
-                                    <p>2021.03.01</p>
-                                </div>
-                                <div class = "col-9">
-                                    <a data-toggle="collapse" href="news.html#news1" aria-expanded="false" aria-controls="news1">
-                                        <p class="line-clamp">ぶるーノせかいへようこそ</p>
-                                    </a>
-                                </div>
-                            </div>
-
-
 
                             <hr class ="news-line">
                             
@@ -131,7 +129,7 @@
                 </div>
 
 
-                <div class = "service" id = "service">
+                <div class = "service scroll" id = "service">
                     <div class = "container">
                         <div class ="fade-text">
                             <div class = "title">
@@ -167,7 +165,7 @@
                     </div> 
                 </div>
 
-                <div class = "works" id = "works">
+                <div class = "works scroll" id = "works">
                     <div class = "container">
                         <div class ="fade-text">
 
@@ -201,7 +199,7 @@
                     </div>
                 </div>
 
-                <div class = "aboutus" id ="aboutus">
+                <div class = "aboutus scroll" id ="aboutus">
                     <div class = "container">
                         <div class ="fade-text">
                             <div class = "title">
@@ -240,7 +238,7 @@
                 </div>
 
         
-                <div class = "contact" id ="contact">
+                <div class = "contact scroll" id ="contact">
                     <div class = "container" >
                         <div class = "fade-text">
                             <div class = "title">
@@ -266,8 +264,8 @@
 
                 <div class ="policies">
                     <ul>
-                        <li><a href="#">セキュリティーポリシー</a></li>
-                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="/site_policy">利用規約</a></li>
+                        <li><a href="/privacy_policy">プライバシーポリシー</a></li>
                     </ul>
                 </div>
                 <p>Copyright © 2021 bluenosekai All Rights Reserved.</p>

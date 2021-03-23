@@ -82,3 +82,11 @@ def works():
 @bp.route("/service")
 def service():
     return render_template("service.html")
+
+@bp.route("/site_policy")
+def site_policy():
+    return render_template("site-policy.html")
+
+@bp.route("/privacy_policy")
+def plivacy_policy():
+    return render_template("privacy-policy.html")
