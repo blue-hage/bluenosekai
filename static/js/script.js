@@ -1,40 +1,40 @@
 $(function() {
 
 
-    // const keyName = 'visited';
-    // const keyValue = true;
+    const keyName = 'visited';
+    const keyValue = true;
 
-    // if (!sessionStorage.getItem(keyName)) {
-    //     //sessionStorageにキーと値を追加
-    //     sessionStorage.setItem(keyName, keyValue);
+    if (!sessionStorage.getItem(keyName)) {
+        //sessionStorageにキーと値を追加
+        sessionStorage.setItem(keyName, keyValue);
 
-    //     $('.anime img').fadeIn(2000);
-    //     $(".mainSite").css("display", "none");
+        $('.anime img').fadeIn(2000);
+        $(".mainSite").css("display", "none");
 
 
 
-    //     setTimeout(function() {
-    //         $('.anime').fadeOut();
+        setTimeout(function() {
+            $('.anime').fadeOut();
             
-    //         }, 3800);
+            }, 3800);
         
-    //     $(".mainSite").css({opacity:'0'});
-    //     setTimeout(function(){
-    //     $(".mainSite").css("display", "block");
-    //     $(".mainSite").stop().animate({opacity:'1'},2000);//1秒かけてコンテンツを表示
-    //     }, 3800);//約4秒後に
+        $(".mainSite").css({opacity:'0'});
+        setTimeout(function(){
+        $(".mainSite").css("display", "block");
+        $(".mainSite").stop().animate({opacity:'1'},2000);//1秒かけてコンテンツを表示
+        }, 3800);//約4秒後に
         
-    //     $(".mainSite").one(function(){
-    //         $(".mainSite").css("display", "none");
-    //     });
+        $(".mainSite").one(function(){
+            $(".mainSite").css("display", "none");
+        });
 
 
-    // } else {
-    //     $(".anime").css("display", "none");
-    //     $(".mainSite").css("display", "block");
+    } else {
+        $(".anime").css("display", "none");
+        $(".mainSite").css("display", "block");
 
 
-    // }
+    }
 
    
 
