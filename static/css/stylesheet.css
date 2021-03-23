@@ -739,3 +739,7 @@ display: none;
     padding-top: 60px;
     margin-top: -60px;
 }
+
+.col9 p{
+    text-align: left;
+}
