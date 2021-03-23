@@ -76,7 +76,7 @@
                     </li>
                     {% if g.user %}
                     <li class="menu">
-                        <a href="/logout">Logout</a>
+                        <a href="{{ url_for('auth.logout) }}'">Logout</a>
                     </li>
                     {% endif %}
                 </ul>
