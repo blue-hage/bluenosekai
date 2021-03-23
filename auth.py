@@ -84,7 +84,6 @@ def login():
         user = select(
             "SELECT * FROM user WHERE username = %s", username
         )
-        print(user)
 
         if not user:
             error = "ユーザー名が違います。"
