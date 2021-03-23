@@ -7,7 +7,7 @@ from flask import(
 )
 
 from werkzeug.security import check_password_hash, generate_password_hash
-from db import open_db, exec, select
+from db import exec, select
 
 bp = Blueprint("auth", __name__, url_prefix="/auth")
 
@@ -84,7 +84,6 @@ def login():
         user = select(
             "SELECT * FROM user WHERE username = %s", username
         )
-        print(user)
 
         if not user:
             error = "ユーザー名が違います。"

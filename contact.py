@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3
 from flask import(
-    Blueprint, request, render_template, flash, redirect
+    Blueprint, request, render_template, flash, redirect, g
 )
 
 from mail import contact_create
