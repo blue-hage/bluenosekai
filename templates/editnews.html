@@ -9,6 +9,9 @@
         </div>
 
         <form method="POST">
+            {% for message in get_flashed_messages() %}
+            <div class="text-danger form">{{ message }}</div>
+            {% endfor %}
             <label for="newsTitle" class="form-label">タイトル</label>
             <input class="form-control" id="newsTitle" name="title">
             <br>
